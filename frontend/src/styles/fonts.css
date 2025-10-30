@@ -1,0 +1,33 @@
+/* ========================================
+   TYPOGRAPHY - FONT IMPORTS
+   ======================================== */
+
+/* Import DM Sans for UI text */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* Import Space Mono for numeric/monospace data */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Font family variables */
+:root {
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+}
+
+/* Apply font families globally */
+body {
+  font-family: var(--font-sans);
+}
+
+/* Numeric data uses Space Mono */
+.numeric,
+.kpi-value,
+[data-numeric="true"] {
+  font-family: var(--font-mono);
+}
+
+/* Code and technical content */
+code, pre {
+  font-family: var(--font-mono);
+}
+

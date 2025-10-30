@@ -1,0 +1,28 @@
+# Flask and Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+Werkzeug==3.0.1
+
+# Database
+# sqlite3 is built-in with Python, no need to install
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.2
+
+# Scientific Computing and Statistics
+scipy==1.11.4
+scikit-learn==1.3.2
+statsmodels==0.14.1
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Time Series (Required for advanced forecasting)
+prophet==1.1.5
+
+# Development and Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+

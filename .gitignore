@@ -1,0 +1,88 @@
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+~$*
+*.lnk
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+*.iml
+
+# Logs / temp
+logs/
+*.log
+*.tmp
+*.temp
+.cache/
+
+# ---- Environment files ----
+.env
+.env.*
+!.env.example
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Testing / typing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pytype/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ---- Databases & data ----
+# SQLite and backups
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Project data folders
+input/*.csv
+input/*.xlsx
+output/dataset/*
+output/Diagrams/*
+
+# Keep diagrams under output/Diagrams tracked
+
+# ---- Node / Frontend (Vite + React + TS) ----
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/.eslintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# ---- OS-specific archives/backups ----
+*.bak
+*.old
+*.orig

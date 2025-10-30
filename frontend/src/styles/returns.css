@@ -1,0 +1,527 @@
+/* ========================================
+   RETURNS PAGE STYLES
+   ======================================== */
+
+.returns-page {
+  padding: 20px;
+  background: var(--background);
+  min-height: 100vh;
+}
+
+.returns-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.returns-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.returns-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.history-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.history-toggle-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* ========================================
+   SEARCH SECTION
+   ======================================== */
+
+.search-section {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search-icon {
+  color: var(--text-muted);
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background: var(--surface);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.search-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.search-btn:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.clear-btn {
+  padding: 12px 20px;
+  background: var(--error);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.clear-btn:hover {
+  background: var(--destructive);
+}
+
+/* ========================================
+   INVOICE DETAILS
+   ======================================== */
+
+.invoice-details {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+
+.invoice-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.invoice-info {
+  text-align: right;
+}
+
+.invoice-info p {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   RETURNABLE ITEMS
+   ======================================== */
+
+.returnable-items {
+  margin-bottom: 20px;
+}
+
+.returnable-items h4 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.items-table {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px 60px 60px 80px 80px 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--surface-hover);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px 60px 60px 80px 80px 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  font-size: 14px;
+}
+
+.table-row:hover {
+  background: var(--surface-hover);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.col-select {
+  display: flex;
+  justify-content: center;
+}
+
+.col-medicine {
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.medicine-info strong {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.medicine-info span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.col-sold,
+.col-returned,
+.col-available,
+.col-quantity,
+.col-price,
+.col-total {
+  text-align: center;
+  font-weight: 500;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ========================================
+   REFUND SUMMARY
+   ======================================== */
+
+.refund-summary {
+  background: var(--surface-hover);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.refund-summary h4 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.refund-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.total-amount {
+  color: var(--success);
+  font-size: 18px;
+}
+
+.refund-methods h5 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.method-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.refund-method-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.refund-method-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.refund-method-btn:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* ========================================
+   RETURN HISTORY
+   ======================================== */
+
+.return-history {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.return-history h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.history-table {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.history-table .table-header {
+  grid-template-columns: 80px 100px 120px 1fr 60px 80px 80px 100px;
+  background: var(--surface-hover);
+}
+
+.history-table .table-row {
+  grid-template-columns: 80px 100px 120px 1fr 60px 80px 80px 100px;
+}
+
+/* ========================================
+   MESSAGES
+   ======================================== */
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: left;
+  }
+  
+  .table-header {
+    display: none;
+  }
+  
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .table-row > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  
+  .table-row > div:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6c757d;
+  }
+}
+
+@media (max-width: 768px) {
+  .returns-page {
+    padding: 12px;
+  }
+  
+  .returns-container {
+    gap: 16px;
+  }
+  
+  .returns-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .invoice-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .invoice-info {
+    text-align: left;
+  }
+  
+  .method-buttons {
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .returns-page {
+    background: white;
+    padding: 0;
+  }
+  
+  .returns-header,
+  .search-section,
+  .refund-summary {
+    display: none;
+  }
+  
+  .invoice-details,
+  .return-history {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 80px 1fr 60px 60px 60px 80px 80px 80px;
+  }
+}

@@ -1,0 +1,151 @@
+/* ========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ======================================== */
+
+/* ===== LARGE DESKTOP (1280px and up) ===== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* ===== DESKTOP (1024px - 1279px) ===== */
+@media (max-width: 1279px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (max-width: 1023px) {
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Seasonal Analysis - Stack on tablet */
+  .seasonal-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .fast-movers-panel {
+    position: relative !important;
+    top: 0 !important;
+  }
+  
+  /* Seasonal Analysis Grid - Responsive */
+  .seasonal-analysis-grid {
+    grid-template-columns: 1fr 400px !important;
+  }
+}
+
+/* ===== MOBILE (max-width: 767px) ===== */
+@media (max-width: 767px) {
+  /* Sidebar hidden by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .main-container {
+    margin-left: 0;
+  }
+  
+  /* Grid becomes single column */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  /* Seasonal Analysis Grid - Mobile */
+  .seasonal-analysis-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Navbar adjustments */
+  .navbar-title {
+    font-size: 1.125rem;
+  }
+  
+  /* Page content padding */
+  .main-content {
+    padding: var(--spacing-md);
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  /* Season selector stacks */
+  .season-selector {
+    flex-direction: column;
+  }
+  
+  .season-selector button {
+    min-width: 100% !important;
+  }
+}
+
+/* ===== SMALL MOBILE (max-width: 640px) ===== */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .page-header {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .card {
+    padding: var(--spacing-md);
+  }
+  
+  /* Smaller font sizes */
+  .page-title {
+    font-size: 1.25rem;
+  }
+  
+  .page-description {
+    font-size: 0.875rem;
+  }
+  
+  /* Chart height reduction */
+  .recharts-wrapper {
+    height: 250px !important;
+  }
+  
+  /* Table scrollable */
+  table {
+    font-size: 0.8125rem;
+  }
+  
+  th, td {
+    padding: var(--spacing-sm) !important;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .sidebar,
+  .navbar,
+  .theme-toggle,
+  button {
+    display: none !important;
+  }
+  
+  .main-container {
+    margin-left: 0;
+  }
+  
+  .card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
+
